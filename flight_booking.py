@@ -21,7 +21,7 @@ class Transportation:
         driver.implicitly_wait(10)
 
         # This block contains all we have to do to get to the passenger information page
-        driver.find_element_by_xpath('//div[@id="alertModal"]').click()
+        driver.find_element_by_xpath('//button[@class="btn btn-danger"]').click()
         departure = driver.find_element_by_xpath('//select[@id="depPort"]')
         select_from = Select(departure)
         select_from.select_by_value('LOS')
